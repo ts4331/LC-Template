@@ -1,0 +1,11 @@
+Quick_Sort(left,right):
+  if left >= right:return
+  i,j = left,right
+  p = (left+right+1)//2
+  while i < j:
+    while nums[j] > nums[p] and i < j:j-=1
+    while nums[i] <= nums[p] and i <j:i+=1
+    nums[i],nums[j] = nums[j],nums[i]
+  nums[p],nums[j] = nums[j],nums[p]
+Quicksort(left,j - 1)
+Quicksort(j+1,right)
